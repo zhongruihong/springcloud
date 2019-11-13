@@ -1,0 +1,33 @@
+server:
+  port: 9091
+  servlet: 
+    context-path: /
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+# for turbin to monitor cluster
+eureka:
+  instance: 
+    hostname: localhost
+    instance-id: hystrix_turbin-cluster
+    prefer-ip-address: true 
+  client:
+   #register-with-eureka: true #default true
+    service-url:
+      defaultZone: http://eureka1.rui.com:2001/eureka/,http://eureka2.rui.com:2002/eureka/,http://eureka3.rui.com:2003/eureka/
+turbine:
+  app-config: eureka-provider   # project to be monitored
+  clusterNameExpression: "'default'" #means cluster's name is default
+spring:
+  application:
+    name: turbine
+
+info:
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  person in charge: zhongruihong
+  tel: 15828095569
+      

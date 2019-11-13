@@ -1,0 +1,37 @@
+server: 
+  port: 1005
+  servlet: 
+    context-path: /
+spring: 
+  application:
+    name: eureka-provider #then PRE_HOST in customer controller turn into http://provider
+  datasource: 
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver  
+    url: jdbc:mysql://localhost:3306/db_springcloud #?serverTimezone=UTC
+    username: root
+    password: 123456
+  jpa: 
+    hibernate: 
+      ddl-auto: update 
+    show-sql: true 
+  thymeleaf: 
+    cache: false 
+eureka: 
+  instance: 
+    hostname: localhost
+    appname: eureka-provider 
+    instance-id: provider5
+    prefer-ip-address: true 
+  client: 
+    serviceUrl: 
+      defaultZone: http://eureka1.rui.com:2001/eureka/,http://eureka2.rui.com:2002/eureka/,http://eureka3.rui.com:2003/eureka/ 
+      #single eureka: http://localhost:2001/eureka 
+info:
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  person in charge: zhongruihong
+  tel: 15828095569
+  provider: 1005
+# for hystrix

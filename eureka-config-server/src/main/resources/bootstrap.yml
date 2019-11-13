@@ -1,0 +1,10 @@
+spring: 
+  application:
+    name: eureka-config-server
+  cloud:
+    config:
+      name: eureka_config #github
+      uri: http://configserver.rui.com:4001 #config-server's address which mapping https://github.com/zhongruihong/springcloud-config-
+      profile: dev #test|dev  # github level. 
+      label: master  # in git default: master
+      fail-fast: true

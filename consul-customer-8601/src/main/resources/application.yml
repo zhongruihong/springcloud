@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: consul-consumer  cloud:    consul:      host: 127.0.0.1 #localhost?
+      port: 8500
+      discovery:        register: false # which means it doesn't to be registered in consul
+server:  port: 8601

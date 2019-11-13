@@ -1,0 +1,13 @@
+server: 
+  port: 2003
+  servlet:     context-path: /
+eureka:   instance:     hostname: eureka3.rui.com #different eureka, different hostname
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url: 
+      defaultZone: http://eureka1.rui.com:2001/eureka/, http://eureka2.rui.com:2002/eureka/ #if there is no /eureka/ in url,servers can't be registered in all eureka.
+      #single eureka: http://${eureka.instance.hostname}:${server.port}/eureka/
+#logging:
+#  pattern:
+#    level: error  

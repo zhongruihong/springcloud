@@ -1,0 +1,21 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: eureka-gateway
+  cloud:
+    gateway:
+     discovery:
+        locator:
+         enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1.rui.com:2001/eureka/,http://eureka2.rui.com:2002/eureka/,http://eureka3.rui.com:2003/eureka/ 
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+info: #which is based on actuator
+  person in charge: zhongruihong
+  tel: 15828095569
+  provider: 1003

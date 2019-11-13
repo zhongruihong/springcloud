@@ -1,0 +1,27 @@
+server:
+  port: 3001
+  servlet: 
+    context-path: /
+spring:
+  application:
+    name: eureka-zuul
+eureka:
+  instance:
+    instance-id: zuul1 
+    prefer-ip-address: true 
+  client: 
+    service-url: 
+      defaultZone: http://eureka1.rui.com:2001/eureka/,http://eureka2.rui.com:2002/eureka/,http://eureka3.rui.com:2003/eureka/
+info: 
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
+  person in charge: zhongruihong
+  tel: 15828095569
+  zuul: 3001
+# for zuul routes rules  if not:url=http://zuul.rui.com:3001/appname/student/list
+zuul:
+  routes:
+    studentServer.serviceId: eureka-provider
+    studentServer.path: /server/** #url=http://zuul.rui.com:3001/server/student/list
+

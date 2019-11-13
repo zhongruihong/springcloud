@@ -1,0 +1,16 @@
+server:
+  port: 8083
+  servlet:    context-path: /
+# for ribbon
+eureka:
+  instance: 
+    hostname: localhost
+    appname: eureka-consumer 
+    instance-id: consumer3 
+    prefer-ip-address: true
+  client:
+    #register-with-eureka: false #defalut true
+    service-url: 
+      defaultZone: http://eureka3.rui.com:2003/eureka/,http://eureka2.rui.com:2002/eureka/,http://eureka1.rui.com:2001/eureka/
+# for hystrix&feign
+feign:  hystrix:    enabled: true
