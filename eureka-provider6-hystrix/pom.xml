@@ -7,7 +7,7 @@
 		<artifactId>springcloud</artifactId>
 		<version>Rui-0.0.1</version>
 	</parent>
-	<artifactId>eureka-provider-config</artifactId>
+	<artifactId>eureka-provider6-hystrix</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -15,7 +15,7 @@
 			<artifactId>common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<!-- eureka-server & config -->
+		<!-- eureka-server config -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -53,12 +53,18 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
+			<version>${druid.version}</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
-		<!-- actuator build in parent for scanning in child-->
+		<!-- actuator-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>2.1.2.RELEASE</version>
+		</dependency>
+		<!-- hystrix -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 		</dependency>
 		<!-- hot dep -->
 		<dependency>

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.rui</groupId>
 	<artifactId>springcloud</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>Rui-0.0.1</version>
 	<packaging>pom</packaging>
 	<properties>
 		<project.build.resourceEncoding>uft-8</project.build.resourceEncoding>
@@ -75,29 +75,29 @@
 	</build>
 	<modules>
 		<module>common</module>
-		<module>config-client-5001</module>
-		<module>config-server-4001</module>
-		<module>consul-customer-8601</module>
-		<module>consul-producer-8501</module>
-		<module>consul-producer-8502</module>
+		<module>config-client</module>
+		<module>config-server</module>
+		<module>consul-customer</module>
+		<module>consul-producer1</module>
+		<module>consul-producer2</module>
 		<module>eureka-config-server</module>
-		<module>eureka-consumer-8081</module>
-		<module>eureka-consumer-feign-8082</module>
-		<module>eureka-customer-hystrix-feign-8083</module>
-		<module>eureka-gateway-8001</module>
-		<module>eureka-hystrix_turbine-cluster-9091</module>
-		<module>eureka-provider-1001</module>
-		<module>eureka-provider-1002</module>
-		<module>eureka-provider-1003</module>
+		<module>eureka-consumer1</module>
+		<module>eureka-consumer2-feign</module>
+		<module>eureka-customer3-hystrix-feign</module>
+		<module>eureka-gateway</module>
 		<module>eureka-provider-config</module>
-		<module>eureka-provider-hystrix-1004</module>
-		<module>eureka-provider-hystrix-1006</module>
-		<module>eureka-provider-hystrix-feign-1005</module>
-		<module>eureka-server-2001</module>
-		<module>eureka-server-2002</module>
-		<module>eureka-server-2003</module>
-		<module>eureka-zuul-3001</module>
+		<module>eureka-provider1</module>
+		<module>eureka-provider2</module>
+		<module>eureka-provider3</module>
+		<module>eureka-provider4-hystrix</module>
+		<module>eureka-provider5-hystrix-feign</module>
+		<module>eureka-provider6-hystrix</module>
+		<module>eureka-server1</module>
+		<module>eureka-server2</module>
+		<module>eureka-server3</module>
+		<module>eureka-zuul</module>
 		<module>gateway-byJavaOrXml</module>
-		<module>hystrix_dashboard-single-9090</module>
+		<module>hystrix-dashboard</module>
+		<module>hystrix-turbine</module>
 	</modules>
 </project>

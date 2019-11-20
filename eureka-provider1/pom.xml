@@ -7,7 +7,7 @@
 		<artifactId>springcloud</artifactId>
 		<version>Rui-0.0.1</version>
 	</parent>
-	<artifactId>eureka-provider-config</artifactId>
+	<artifactId>eureka-provider1</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -15,7 +15,7 @@
 			<artifactId>common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<!-- eureka-server & config -->
+		<!-- eureka client's dependecies：eureka-server $ config -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -27,10 +27,10 @@
 			</exclusions>
 		</dependency>
 		<!-- config -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
+		</dependency> -->
 		<!-- driver -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -48,18 +48,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<version>2.1.2.RELEASE</version>
-		</dependency>
+		</dependency> 
 		<!-- connection pool -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
-		</dependency>
-		<!-- actuator build in parent for scanning in child-->
+			</dependency> 
+		<!-- actuator :build plugins should be added in parent project for scanning child's settiong files when rebuilding -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 			<version>2.1.2.RELEASE</version>
-		</dependency>
+		</dependency> 
 		<!-- hot dep -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -7,17 +7,24 @@
 		<artifactId>springcloud</artifactId>
 		<version>Rui-0.0.1</version>
 	</parent>
-	<artifactId>gateway-byJavaOrXml</artifactId>
-	<properties>
-		<java.version>13</java.version>
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-		<maven.compiler.target>${java.version}</maven.compiler.target>
-	</properties>
+	<artifactId>config-client</artifactId>
 	<dependencies>
-		<!-- Spring Cloud Gateway by netty+webflux  so don't need web  -->
+		<!-- starter-config -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<!-- web -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>2.1.2.RELEASE</version>
+		</dependency>
+		<!-- tomcat -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<version>2.1.2.RELEASE</version>
 		</dependency>
 		<!-- hot dep -->
 		<dependency>

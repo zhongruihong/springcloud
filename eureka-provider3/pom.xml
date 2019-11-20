@@ -7,7 +7,7 @@
 		<artifactId>springcloud</artifactId>
 		<version>Rui-0.0.1</version>
 	</parent>
-	<artifactId>eureka-provider-config</artifactId>
+	<artifactId>eureka-provider3</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -27,10 +27,10 @@
 			</exclusions>
 		</dependency>
 		<!-- config -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
+		</dependency> -->
 		<!-- driver -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -54,7 +54,7 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 		</dependency>
-		<!-- actuator build in parent for scanning in child-->
+		<!-- actuator build in parent -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>

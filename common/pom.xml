@@ -3,7 +3,7 @@
   <parent>
     <groupId>com.rui</groupId>
     <artifactId>springcloud</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>Rui-0.0.1</version>
   </parent>
   <artifactId>common</artifactId>
   <dependencies>
